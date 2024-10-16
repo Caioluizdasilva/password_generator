@@ -1,0 +1,141 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    gap: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffd700;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+#lock_icon {
+    font-size: 4rem; 
+    color: #ffd700; 
+    text-align: center;
+    display: block; 
+    margin: 20px 0; 
+}
+#copy_icon {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-left: 8px; 
+}
+#password_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 16px 20px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    word-break: break-word;
+}
+
+#password_container:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+#password {
+    color: #ffd700;
+    font-size: 1.4rem;
+}
+
+#password_items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1rem;
+    color: #f2f2f2;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #ffd700;
+}
+
+input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    border: 2px solid #ffd700;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+#generate {
+    grid-column: span 2;
+    background-color: #ffd700;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#generate:hover {
+    background-color: #e5c100;
+    transform: scale(1.07);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #password_container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #password_items {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
